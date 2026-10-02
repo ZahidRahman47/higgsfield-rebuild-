@@ -26,7 +26,7 @@ export default function TopBar() {
         href={href}
         onClick={() => setOpen(null)}
         className={clsx(
-          "rounded-lg px-2.5 py-1.5 text-[15px] transition-colors",
+          "block whitespace-nowrap rounded-lg px-2 py-1.5 text-[15px] transition-colors sm:px-2.5",
           path === href ? "text-lime" : "text-muted hover:text-white",
           open === menu && menu && "bg-card text-white",
         )}
@@ -53,15 +53,17 @@ export default function TopBar() {
         </div>
       )}
       <nav className="flex h-14 items-center gap-1 border-b border-line/60 bg-bg/90 px-3 backdrop-blur sm:px-4">
-        <Link href="/" className="mr-2 flex items-center gap-2" aria-label="Home">
+        <Link href="/" className="mr-1 flex shrink-0 items-center gap-2 sm:mr-2" aria-label="Home">
           <Logo />
           <span className="hidden text-sm font-semibold lg:block">Higgsfield Rebuild</span>
         </Link>
-        {item("/", "Explore")}
-        {item("/image", "Image", "image")}
-        {item("/video", "Video", "video")}
-        {item("/assets", "Assets")}
-        <div className="ml-auto flex items-center gap-2">
+        <div className="no-scrollbar flex min-w-0 items-center overflow-x-auto">
+          {item("/", "Explore")}
+          {item("/image", "Image", "image")}
+          {item("/video", "Video", "video")}
+          {item("/assets", "Assets")}
+        </div>
+        <div className="ml-auto flex shrink-0 items-center gap-2">
           <Link
             href="/image"
             title={`Free credits refill to ${DAILY_CREDITS} every day`}
@@ -74,7 +76,7 @@ export default function TopBar() {
           <button aria-label="Notifications" className="hidden rounded-full p-2 text-muted hover:text-white sm:block">
             <Bell className="size-4.5" />
           </button>
-          <div className="size-8 rounded-full bg-[radial-gradient(circle_at_40%_40%,#f6ffcf,#d9ff43_45%,#7a8f20)]" aria-label="Guest" />
+          <div className="hidden size-8 rounded-full sm:block bg-[radial-gradient(circle_at_40%_40%,#f6ffcf,#d9ff43_45%,#7a8f20)]" aria-label="Guest" />
         </div>
       </nav>
       {open && (

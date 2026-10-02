@@ -26,7 +26,7 @@ const TOOLS = [
 export default function Explore() {
   return (
     <main className="mx-auto max-w-[1600px] space-y-10 px-4 pb-20 pt-5">
-      <section className="no-scrollbar -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4">
+      <section className="no-scrollbar -mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4">
         {HERO.map((h, i) => {
           const img = pick(h.id);
           return (

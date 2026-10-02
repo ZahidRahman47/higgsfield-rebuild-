@@ -153,7 +153,7 @@ export default function ImageStudio() {
               <button
                 onClick={submit}
                 disabled={!canGo}
-                className="flex flex-1 flex-col items-center justify-center rounded-xl bg-lime px-6 py-3 font-semibold text-black transition-colors hover:bg-lime-deep disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-lime px-6 py-3 font-semibold sm:flex-col sm:gap-0 text-black transition-colors hover:bg-lime-deep disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Generate
                 <span className="flex items-center gap-1 text-sm font-medium"><Sparkles className="size-3.5" />{cost}</span>
