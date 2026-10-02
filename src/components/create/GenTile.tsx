@@ -4,6 +4,7 @@ import { memo, useEffect, useState } from "react";
 import { AlertTriangle, RotateCcw } from "lucide-react";
 import type { Generation } from "@/lib/store";
 import { motionById } from "@/lib/motion";
+import { styleById } from "@/lib/generate";
 
 /** One generation: shimmer while pending, the image when ready, retry when failed. */
 export default memo(function GenTile({
@@ -43,6 +44,10 @@ export default memo(function GenTile({
             className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-play"
             style={motion ? { animation: motion.anim } : undefined}
           />
+          <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 pb-2.5 pt-8 text-left opacity-0 transition-opacity group-hover:opacity-100">
+            <span className="mb-1 inline-block rounded bg-white/15 px-1.5 py-0.5 text-[11px] backdrop-blur">{styleById(g.style).label} · {g.aspect}</span>
+            <span className="line-clamp-2 text-xs text-white/90">{g.prompt}</span>
+          </span>
           {motion && (
             <span className="absolute left-2 top-2 rounded-md bg-black/60 px-2 py-0.5 text-xs backdrop-blur">
               {motion.glyph} {motion.label}

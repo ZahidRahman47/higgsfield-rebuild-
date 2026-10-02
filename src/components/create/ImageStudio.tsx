@@ -25,7 +25,7 @@ export default function ImageStudio() {
   const [quality, setQuality] = useState<QualityId>("high");
   const [count, setCount] = useState(1);
   const [enhance, setEnhance] = useState(true);
-  const [zoom, setZoom] = useState(3);
+  const [cols, setCols] = useState(5);
   const [open, setOpen] = useState<Generation | null>(null);
 
   const credits = useStudio((s) => s.credits);
@@ -35,11 +35,6 @@ export default function ImageStudio() {
   const retry = useRetry();
 
   const images = useMemo(() => all.filter((g) => g.kind === "image"), [all]);
-  const batches = useMemo(() => {
-    const map = new Map<string, Generation[]>();
-    for (const g of images) map.set(g.batchId, [...(map.get(g.batchId) ?? []), g]);
-    return [...map.values()];
-  }, [images]);
 
   const cost = imageCost(quality, count);
   const short = credits < cost;
@@ -67,36 +62,32 @@ export default function ImageStudio() {
 
   return (
     <main className="mx-auto flex min-h-[calc(100dvh-96px)] max-w-[1600px] flex-col px-4">
-      {batches.length > 0 && (
-        <div className="flex items-center justify-end gap-3 py-3">
-          <SlidersHorizontal className="size-4 text-muted" />
-          <input
-            type="range" min={2} max={6} value={zoom} onChange={(e) => setZoom(+e.target.value)}
-            aria-label="Grid size" className="w-32 accent-lime"
-            style={{ direction: "rtl" }}
-          />
+      {images.length > 0 && (
+        <div className="flex items-center justify-between gap-3 py-3">
+          <p className="text-sm text-muted" suppressHydrationWarning>
+            {images.length} generation{images.length === 1 ? "" : "s"}
+          </p>
+          <label className="hidden items-center gap-3 sm:flex">
+            <SlidersHorizontal className="size-4 text-muted" />
+            {/* drag right for bigger tiles (fewer per row), like the original */}
+            <input
+              type="range" min={2} max={6} value={8 - cols} onChange={(e) => setCols(8 - +e.target.value)}
+              aria-label="Tile size" className="w-28 accent-lime"
+            />
+          </label>
         </div>
       )}
 
       <div className="flex-1 pb-56">
-        {batches.length === 0 ? (
+        {images.length === 0 ? (
           <EmptyHero onPick={setPrompt} />
         ) : (
-          <div className="space-y-8">
-            {batches.map((b) => (
-              <section key={b[0].batchId}>
-                <div className="mb-2 flex items-center gap-2 text-sm">
-                  <span className="rounded-md bg-card px-2 py-0.5 text-xs text-muted">{styleById(b[0].style).label}</span>
-                  <span className="rounded-md bg-card px-2 py-0.5 text-xs text-muted">{b[0].aspect}</span>
-                  <button className="min-w-0 truncate text-left text-muted hover:text-white" title="Use this prompt" onClick={() => { setPrompt(b[0].prompt); setStyle(b[0].style); }}>
-                    {b[0].prompt}
-                  </button>
-                </div>
-                <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${Math.min(zoom, b.length > 1 ? zoom : 2)}, minmax(0, 1fr))` }}>
-                  {b.map((g) => <GenTile key={g.id} g={g} onOpen={onOpen} onRetry={onRetry} />)}
-                </div>
-              </section>
-            ))}
+          // one continuous grid, newest first; 2 per row on phones, slider-controlled above that
+          <div
+            className="grid grid-cols-2 gap-2 sm:[grid-template-columns:repeat(var(--cols),minmax(0,1fr))]"
+            style={{ "--cols": cols } as React.CSSProperties}
+          >
+            {images.map((g) => <GenTile key={g.id} g={g} onOpen={onOpen} onRetry={onRetry} />)}
           </div>
         )}
       </div>
