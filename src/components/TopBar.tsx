@@ -61,6 +61,10 @@ export default function TopBar() {
           {item("/", "Explore")}
           {item("/image", "Image", "image")}
           {item("/video", "Video", "video")}
+          <span className="mx-1.5 hidden h-5 w-px bg-line md:block" />
+          {item("/video?motion=crash-zoom", "Motion Presets")}
+          {item("/#projects", "Projects")}
+          {item("/#community", "Community")}
           {item("/assets", "Assets")}
         </div>
         <div className="ml-auto flex shrink-0 items-center gap-2">

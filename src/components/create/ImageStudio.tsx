@@ -15,7 +15,7 @@ import {
   ASPECTS, QUALITIES, dimensions, imageCost, imageUrl, randomSeed, styleById,
   type AspectId, type QualityId,
 } from "@/lib/generate";
-import { SHOWCASE } from "@/lib/showcase";
+import { MEDIA } from "@/lib/media";
 
 export default function ImageStudio() {
   const params = useSearchParams();
@@ -178,16 +178,16 @@ export default function ImageStudio() {
 }
 
 function EmptyHero({ onPick }: { onPick: (p: string) => void }) {
-  const fan = ["jazz", "dinner", "portrait-phone", "neon-girl"].map((id) => SHOWCASE.find((s) => s.id === id)).filter(Boolean);
-  const ideas = SHOWCASE.slice(0, 3);
+  const fan = [MEDIA.soulcinema[0], MEDIA.soulcinema[3], MEDIA.cinematic[1], MEDIA.soul[1]];
+  const ideas = [MEDIA.vfx[0], MEDIA.cinematic[2], MEDIA.marketing[1]];
   return (
     <div className="flex flex-col items-center pt-[8vh] text-center">
       <div className="mb-8 flex">
         {fan.map((s, i) => (
           <Image
-            key={s!.id} src={s!.src} alt="" width={144} height={176} priority placeholder="blur" blurDataURL={s!.blur}
+            key={s.id} src={s.src} alt="" width={144} height={176} priority
             className="-mx-2 h-36 w-28 rounded-xl border-2 border-white/15 object-cover shadow-2xl sm:h-44 sm:w-36"
-            style={{ transform: `rotate(${[-8, -3, 3, 8][i]}deg) translateY(${[8, 0, 0, 8][i]}px)` }}
+            style={{ backgroundColor: s.color, transform: `rotate(${[-8, -3, 3, 8][i]}deg) translateY(${[8, 0, 0, 8][i]}px)` }}
           />
         ))}
       </div>
@@ -199,8 +199,8 @@ function EmptyHero({ onPick }: { onPick: (p: string) => void }) {
       <p className="mt-3 max-w-lg text-muted">Describe a scene, character, mood, or style and watch it come to life.</p>
       <div className="mt-6 flex max-w-3xl flex-wrap justify-center gap-2">
         {ideas.map((s) => (
-          <button key={s.id} onClick={() => onPick(s.prompt)} className="rounded-full border border-line bg-card px-4 py-2 text-sm text-muted hover:text-white">
-            Try: {s.prompt.split(",")[0]}
+          <button key={s.id} onClick={() => onPick(s.alt)} className="rounded-full border border-line bg-card px-4 py-2 text-sm text-muted hover:text-white">
+            Try: {s.alt}
           </button>
         ))}
       </div>

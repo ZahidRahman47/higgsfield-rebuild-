@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Inter } from "next/font/google";
+import { Archivo, Inter } from "next/font/google";
 import TopBar from "@/components/TopBar";
+import Footer from "@/components/landing/Footer";
 import Providers from "./providers";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const display = Barlow_Condensed({ variable: "--font-display", subsets: ["latin"], weight: ["700", "800"] });
+const display = Archivo({ variable: "--font-display", subsets: ["latin"], axes: ["wdth"] });
 
 export const metadata: Metadata = {
   title: "Higgsfield Rebuild — AI image & video studio",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <TopBar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

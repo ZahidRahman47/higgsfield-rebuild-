@@ -10,6 +10,26 @@
   "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoMABAAA4BaJYwCdAYulNvrnRLHAAD+4ljLR+G+++8cfOJO5+kGMlr1Nk6kKG3w0FLYCKVSkGev/L+u75XiCc/Ab1P4B0P46dEvrQqPR9LYAboYuli3mGEwAAA="
  },
  {
+  "id": "desert-runner",
+  "style": "Cinematic",
+  "w": 971,
+  "h": 607,
+  "prompt": "lone runner crossing red desert dunes at golden hour, glowing blue energy trails, epic wide shot",
+  "seed": 1001,
+  "src": "/showcase/desert-runner.webp",
+  "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoMAAgAA4BaJaACdAEOeXp9T+AA/qN+WkfaAUKqdZIAge/u28CnK85VQbrNcA0PO1erCK4kUAA="
+ },
+ {
+  "id": "neon-girl",
+  "style": "Photoreal",
+  "w": 665,
+  "h": 886,
+  "prompt": "young woman in a denim jacket on a neon-lit Tokyo street at night, rain reflections, shallow depth of field",
+  "seed": 1002,
+  "src": "/showcase/neon-girl.webp",
+  "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAQCdASoMABAAA4BaJYgCdAYuRZb2pYAA/u+GVxGb/B3+z+6pslitQvscglSoL9x1uvXtOpJzh4GUjrprXYYFNoSGD+r5Z6yaU53z8gWHvWoY+Yc+O5ORJg35XnalavRj8jQz6WOw2ELsKANL8X5XVoAAAA=="
+ },
+ {
   "id": "crows",
   "style": "Cinematic",
   "w": 665,
@@ -18,6 +38,56 @@
   "seed": 1003,
   "src": "/showcase/crows.webp",
   "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAQCdASoMABAAA4BaJZwAAkaLLAD+31pnCByrsuc3AOhPoc5V421cQuO1pNKFDtzIAA=="
+ },
+ {
+  "id": "f1-garage",
+  "style": "Cinematic",
+  "w": 971,
+  "h": 607,
+  "prompt": "papaya orange formula one car in a pit garage, mechanic in helmet, dramatic overhead light",
+  "seed": 1004,
+  "src": "/showcase/f1-garage.webp",
+  "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoMAAgAA4BaJYwCdAD0SbrW/AAA/oH+Dl7rCmN7Hhis+XF4r6lbgsXZr9Udy7Dgu/j8PtYliwAAAA=="
+ },
+ {
+  "id": "ice-cream",
+  "style": "Fashion",
+  "w": 665,
+  "h": 886,
+  "prompt": "stylish man in navy suit and black sunglasses holding a pink ice cream cone on Hollywood boulevard, editorial",
+  "seed": 1005,
+  "src": "/showcase/ice-cream.webp",
+  "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoMABAAA4BaJYgCdAYxF29aKM42vOAA/rIK6F0Mr5bG8BKJi/x9h8bVDkkc/5y0C/vTKE27+W2ZEPMxwt/ZkkipsFidDq7fVkgHHo4NXynB/hz91GTyk9LvX/DDfnZPnwAAAA=="
+ },
+ {
+  "id": "astronaut",
+  "style": "Cinematic",
+  "w": 971,
+  "h": 607,
+  "prompt": "astronaut standing in a field of sunflowers under a giant ringed planet, surreal, cinematic",
+  "seed": 1007,
+  "src": "/showcase/astronaut.webp",
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoMAAgAA4BaJbACdAEDpUCNNMgA/vGCXhObFIx6SX+dedrQaZgFjIsm/0UKeszPxrrgcEdz5KwSjHiTnwdeTlkXg9m1AqHOkvKlzEUTts34AAAA"
+ },
+ {
+  "id": "ceramics",
+  "style": "Product",
+  "w": 665,
+  "h": 886,
+  "prompt": "handmade ceramic cups on a linen table, soft morning window light, minimal still life",
+  "seed": 1008,
+  "src": "/showcase/ceramics.webp",
+  "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoMABAAA4BaJZQC7ADcB1ZLgAD+uFGmsV7aHafLX31qL7Z9fo+4cGlJgz/21+g4TSJMMBwQMGooyoM5hHtmRXpIR00HEwle8+pjxhd+YAuV84gAAAA="
+ },
+ {
+  "id": "anime-city",
+  "style": "Anime",
+  "w": 971,
+  "h": 607,
+  "prompt": "anime style skyline at sunset with trains crossing a bridge, vibrant clouds, studio ghibli inspired",
+  "seed": 1009,
+  "src": "/showcase/anime-city.webp",
+  "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoMAAgAA4BaJZgCdEf/gZW7smQA/kALUMdlr0NZ+p/a8pv7/xX9Zwx+jUV2PpSnv2gC0maKDvSrxN2mKX+7SgwAAAA="
  },
  {
   "id": "portrait-phone",
@@ -30,6 +100,16 @@
   "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQAgCdASoMABAAA4BaJYwCdAYwoAWU0aYXlRMCgAD+8aXdPQYltsHEapKXbs0Q8UtClLHqCvENy12jgIQafZ+w7e/3oa3pQ+cN9fzow2GSEu6ug5lDhw+pkxrHNff40oSdzSxr2QAZ8xE4Gu5a5QAA"
  },
  {
+  "id": "puzzle-field",
+  "style": "Cinematic",
+  "w": 971,
+  "h": 607,
+  "prompt": "three friends running across a green hill carrying giant colorful puzzle pieces, summer, kodak portra",
+  "seed": 1012,
+  "src": "/showcase/puzzle-field.webp",
+  "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoMAAgAA4BaJagCdAEWtTDj/IAA/uoBwyajptU6+ngUvNbTG6bv/hrmpPDCJyJA4Fz+pt8SpmEYhzpzhGjA4wAA"
+ },
+ {
   "id": "samurai",
   "style": "Cinematic",
   "w": 665,
@@ -38,6 +118,16 @@
   "seed": 1013,
   "src": "/showcase/samurai.webp",
   "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoMABAAA4BaJZACdACzbCHfyuGgAM4/WaJ6E+l+KF7bGkT8qiZdUckz2iPIkCaok5VGq603XuvtuiV/tTkHOfAmBnYM1NZ/q6fvU98KF4Ax08t5zCJDlkOIAAA="
+ },
+ {
+  "id": "sneaker",
+  "style": "Product",
+  "w": 768,
+  "h": 768,
+  "prompt": "floating white sneaker exploding into colorful paint splashes, studio product photography",
+  "seed": 1014,
+  "src": "/showcase/sneaker.webp",
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoMAAwAA4BaJbACdADdh2HF4tgA/u0PUx3rpcfwZ0qZQvxgqfG77pjg8iS5FDzKHUjMR4XBtGAASsxIbXyiYL88tNOIUZy4WFQOzYX0r2S8auQqtWWCQAAA"
  },
  {
   "id": "skater",
@@ -50,6 +140,26 @@
   "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoMABAAA4BaJYgCdADG9U6YgAD+tdFgQSjvGkKxKhlsnLoMkdn5RlxmoC8Y5EavAMxxFN2qmyzhPMUInHUJwAAA"
  },
  {
+  "id": "lighthouse",
+  "style": "Cinematic",
+  "w": 971,
+  "h": 607,
+  "prompt": "lighthouse on a cliff in a violent storm, huge waves, lightning, cinematic wide",
+  "seed": 1017,
+  "src": "/showcase/lighthouse.webp",
+  "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoMAAgAA4BaJbACdADc50V+gAD+5dC8ZtSa1qqlyEE5yZIpLjI05P2Pud4WVetE9/ri5vPIwAAAAA=="
+ },
+ {
+  "id": "dinner",
+  "style": "Photoreal",
+  "w": 665,
+  "h": 886,
+  "prompt": "friends laughing at a candlelit dinner table, warm bokeh, candid film photo",
+  "seed": 1018,
+  "src": "/showcase/dinner.webp",
+  "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoMABAAA4BaJZgCdAYuvZ/b7fmAAP7zRgCw6SVvp8SqP1fylgbGqbbOXWT//7hfhXCzTFmBDAairkFMZwfodp7ly1dBaD46IIn8+WJRNrsJZedAcxMx7iy8THs2VOhSbSRygAAA"
+ },
+ {
   "id": "fox",
   "style": "3D",
   "w": 768,
@@ -60,6 +170,16 @@
   "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoMAAwAA4BaJbACdAEf/gOYMzQA/vF0UIp/ZAUOdRj0oyGkSW73XuOBwHq1XQxuo5ZJrSCV99JA8523xewAAA=="
  },
  {
+  "id": "cyber-portrait",
+  "style": "Cinematic",
+  "w": 665,
+  "h": 886,
+  "prompt": "cyberpunk portrait with holographic visor, magenta and teal lighting, rain",
+  "seed": 1020,
+  "src": "/showcase/cyber-portrait.webp",
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoMABAAA4BaJbACdADHdF2VVoAA/u0e/hCGNrTydBDGAygybaWN9nqHsYmIyxfJodXax9MSxcdM8K1ccPuwQl9Mh6N3bNvIbquQvdLbhCxnTAAA"
+ },
+ {
   "id": "watch",
   "style": "Product",
   "w": 768,
@@ -68,5 +188,15 @@
   "seed": 1022,
   "src": "/showcase/watch.webp",
   "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMAAwAA4BaJZwAAvh7ISELIAD9d6wkxULxvAG4hWFX6SCvESujJa8Df+ALGKC/EIKmlDkji1jebMDDgAA="
+ },
+ {
+  "id": "dancer",
+  "style": "Fashion",
+  "w": 665,
+  "h": 886,
+  "prompt": "contemporary dancer in flowing red fabric, motion blur, black studio background",
+  "seed": 1023,
+  "src": "/showcase/dancer.webp",
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoMABAAA4BaJagCdADRX7LQAP7zJX0W9OZ3dKDJP+NyTuGY3ozvAUSvFO53qMVPY4gbc/a5NtYn/jv+hgAAAA=="
  }
 ]

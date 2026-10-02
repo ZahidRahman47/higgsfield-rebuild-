@@ -13,7 +13,7 @@ import { useStudio, type Generation } from "@/lib/store";
 import { useGenerate, useRetry, newId } from "@/lib/use-generate";
 import { MODEL_LABEL, VIDEO_COST, imageUrl, randomSeed, styleById } from "@/lib/generate";
 import { MOTIONS, motionById } from "@/lib/motion";
-import { SHOWCASE } from "@/lib/showcase";
+import { MEDIA } from "@/lib/media";
 
 const FRAMES = [
   { id: "16:9", w: 1280, h: 720 },
@@ -67,7 +67,7 @@ export default function VideoStudio() {
           className="grid w-[min(356px,calc(100vw-56px))] grid-cols-2 gap-1"
           trigger={() => (
             <div className="relative h-36 cursor-pointer overflow-hidden rounded-xl">
-              <Image src={SHOWCASE.find((s) => s.id === "desert-runner")?.src ?? SHOWCASE[0].src} alt="" fill sizes="380px" priority className="object-cover motion-play" style={{ animation: m.anim }} />
+              <Image src={MEDIA.hero[0].src} alt="" fill sizes="380px" priority className="object-cover motion-play" style={{ animation: m.anim }} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               <span className="absolute right-2 top-2 flex items-center gap-1 rounded-lg bg-black/60 px-2 py-1 text-sm backdrop-blur"><Pencil className="size-3.5" />Change</span>
               <div className="absolute bottom-3 left-3">
@@ -158,9 +158,9 @@ export default function VideoStudio() {
 
 function HowItWorks() {
   const steps = [
-    { id: "lighthouse", title: "Describe the shot", sub: "Write what the camera sees. A style sets the look." },
-    { id: "f1-garage", title: "Choose a camera move", sub: "Dolly, crane, arc, handheld, crash zoom and more.", motion: "pan-right" },
-    { id: "samurai", title: "Get your motion shot", sub: "Click Generate. It plays in History, ready to download.", motion: "dolly-in" },
+    { id: "1", p: MEDIA.cinematic[3], title: "Describe the shot", sub: "Write what the camera sees. A style sets the look." },
+    { id: "2", p: MEDIA.community[0], title: "Choose a camera move", sub: "Dolly, crane, arc, handheld, crash zoom and more.", motion: "pan-right" },
+    { id: "3", p: MEDIA.soulcinema[1], title: "Get your motion shot", sub: "Click Generate. It plays in History, ready to download.", motion: "dolly-in" },
   ];
   return (
     <div className="py-6 sm:py-12">
@@ -170,7 +170,7 @@ function HowItWorks() {
         {steps.map((s, i) => (
           <div key={s.id}>
             <div className="relative aspect-video overflow-hidden rounded-xl bg-card">
-              <Image src={SHOWCASE.find((x) => x.id === s.id)?.src ?? SHOWCASE[0].src} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover motion-play" style={s.motion ? { animation: motionById(s.motion).anim } : undefined} />
+              <Image src={s.p.src} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover motion-play" style={s.motion ? { animation: motionById(s.motion).anim } : undefined} />
               <span className="absolute left-2 top-2 grid size-7 place-items-center rounded-full bg-lime text-sm font-bold text-black">{i + 1}</span>
             </div>
             <h3 className="display mt-3 text-xl">{s.title}</h3>

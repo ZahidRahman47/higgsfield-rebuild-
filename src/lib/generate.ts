@@ -2,16 +2,18 @@
 // /api/image, so results are CDN-cacheable and can be re-created or shared
 // from their parameters alone.
 
+import { MEDIA } from "./media";
+
 export type Kind = "image" | "video";
 
 export const STYLES = [
-  { id: "none", label: "General", suffix: "", thumb: "/showcase/neon-girl.webp" },
-  { id: "cinematic", label: "Cinematic", suffix: "cinematic film still, anamorphic lens, dramatic lighting, film grain", thumb: "/showcase/jazz.webp" },
-  { id: "photoreal", label: "Photoreal", suffix: "ultra realistic photograph, natural light, 85mm, high detail", thumb: "/showcase/portrait-phone.webp" },
-  { id: "product", label: "Product", suffix: "studio product photography, clean background, soft shadows, commercial", thumb: "/showcase/perfume.webp" },
-  { id: "fashion", label: "Fashion", suffix: "high fashion editorial photo, vogue, bold styling", thumb: "/showcase/ice-cream.webp" },
+  { id: "none", label: "General", suffix: "", thumb: MEDIA.hero[2].src },
+  { id: "cinematic", label: "Cinematic", suffix: "cinematic film still, anamorphic lens, dramatic lighting, film grain", thumb: MEDIA.soulcinema[0].src },
+  { id: "photoreal", label: "Photoreal", suffix: "ultra realistic photograph, natural light, 85mm, high detail", thumb: MEDIA.cinematic[0].src },
+  { id: "product", label: "Product", suffix: "studio product photography, clean background, soft shadows, commercial", thumb: MEDIA.marketing[0].src },
+  { id: "fashion", label: "Fashion", suffix: "high fashion editorial photo, vogue, bold styling", thumb: MEDIA.soul[0].src },
   { id: "anime", label: "Anime", suffix: "anime illustration, vibrant colors, detailed background", thumb: "/showcase/anime-city.webp" },
-  { id: "3d", label: "3D Render", suffix: "3d render, pixar style, soft global illumination", thumb: "/showcase/robot-cafe.webp" },
+  { id: "3d", label: "3D Render", suffix: "3d render, pixar style, soft global illumination", thumb: "/showcase/fox.webp" },
 ] as const;
 export type StyleId = (typeof STYLES)[number]["id"];
 
