@@ -24,9 +24,10 @@ Sessions involved (all opened in the VS Code extension, in this repo):
 |---|---|---|
 | `27a0866e` | Setup session. Created the hook, so it is **not** logged (see below) | none |
 | `7ecce228` | **Canary 1**: a fresh session, the first one opened after the hook existed | [`.agent-logs/2026-10-02_11-23-19_7ecce228-bb62-4091-8c88-fda1024013ec.md`](.agent-logs/2026-10-02_11-23-19_7ecce228-bb62-4091-8c88-fda1024013ec.md) |
+| `d1a5d80b` | **Canary 2**: a new chat opened after the fix | [`.agent-logs/2026-10-02_11-26-38_d1a5d80b-4aa4-4c31-8df3-bae76636e6d4.md`](.agent-logs/2026-10-02_11-26-38_d1a5d80b-4aa4-4c31-8df3-bae76636e6d4.md) |
 | `bf032058` | **Session 3**: the build session. Its first prompt is the assignment brief | [`.agent-logs/2026-10-02_11-24-09_bf032058-4f64-4530-99c9-7ba66c05ba64.md`](.agent-logs/2026-10-02_11-24-09_bf032058-4f64-4530-99c9-7ba66c05ba64.md) |
 
-Both `7ecce228` and `bf032058` are separate sessions from the one that installed the hook, and both were captured without anyone running anything by hand. So the hook isn't tied to the session that created it.
+`7ecce228`, `d1a5d80b` and `bf032058` are all separate sessions from the one that installed the hook, and both were captured without anyone running anything by hand. So the hook isn't tied to the session that created it.
 
 ## Canary entries (raw)
 
@@ -121,7 +122,31 @@ Your camera is on in the walkthrough, and it is under five minutes.
  before you start me to check both logs, fill in CAPTURE-TEST.md, and make the first commit
 ~~~~
 
-> A second literal `CAPTURE TEST` canary, sent from a fresh session after the counter fix below, is pending. It will be added here when it's sent.
+### Canary 2: session `d1a5d80b`, PROMPT and RESPONSE (raw)
+
+Sent from a new chat after the counter fix and the first commit, so it also checks the fixed script in a live session. The typo "APTURE" is in the prompt as I typed it. It stays, because the log is verbatim.
+
+Log file: [`.agent-logs/2026-10-02_11-26-38_d1a5d80b-4aa4-4c31-8df3-bae76636e6d4.md`](.agent-logs/2026-10-02_11-26-38_d1a5d80b-4aa4-4c31-8df3-bae76636e6d4.md)
+
+~~~~text
+[LOG_ENTRY type=PROMPT num=1 session=d1a5d80b]
+timestamp: 2026-10-02T11:26:38.908Z
+model: claude-opus-5-5
+
+<ide_opened_file>The user opened the file /Users/zahidrahman/Desktop/8x-engieer-task/agent.md in the IDE. This may or may not be related to the current task.</ide_opened_file>
+APTURE TEST — 8x assignment, Zahid Rahman
+
+
+[LOG_ENTRY type=RESPONSE num=1 session=d1a5d80b]
+timestamp: 2026-10-02T11:26:44.482Z
+model: claude-opus-5-5
+
+Got it. This looks like a capture test ("CAPTURE TEST", with the first letter cut off) for your 8x assignment. I received your message. I haven't run any commands or changed any files.
+
+Your git status shows `.agent-logs/2026-10-02_11-24-09_bf032058-….md` as modified, which suggests the agent capture you set up in the last commit is recording this session. Open that file to confirm this exchange is in it.
+
+Tell me what you'd like to do next.
+~~~~
 
 ## What I tried first that did not work
 
