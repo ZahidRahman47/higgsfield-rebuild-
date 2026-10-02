@@ -1,0 +1,72 @@
+[
+ {
+  "id": "jazz",
+  "style": "Cinematic",
+  "w": 665,
+  "h": 886,
+  "prompt": "jazz trumpeter in a smoky 1960s club, warm tungsten light, film grain, 35mm",
+  "seed": 1000,
+  "src": "/showcase/jazz.webp",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoMABAAA4BaJYwCdAYulNvrnRLHAAD+4ljLR+G+++8cfOJO5+kGMlr1Nk6kKG3w0FLYCKVSkGev/L+u75XiCc/Ab1P4B0P46dEvrQqPR9LYAboYuli3mGEwAAA="
+ },
+ {
+  "id": "crows",
+  "style": "Cinematic",
+  "w": 665,
+  "h": 886,
+  "prompt": "flock of crows bursting from a bare tree in thick fog, moody muted greens",
+  "seed": 1003,
+  "src": "/showcase/crows.webp",
+  "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAQCdASoMABAAA4BaJZwAAkaLLAD+31pnCByrsuc3AOhPoc5V421cQuO1pNKFDtzIAA=="
+ },
+ {
+  "id": "portrait-phone",
+  "style": "Photoreal",
+  "w": 665,
+  "h": 886,
+  "prompt": "woman with curly hair and glasses talking on a vintage rotary phone, 1970s office, film photo",
+  "seed": 1010,
+  "src": "/showcase/portrait-phone.webp",
+  "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQAgCdASoMABAAA4BaJYwCdAYwoAWU0aYXlRMCgAD+8aXdPQYltsHEapKXbs0Q8UtClLHqCvENy12jgIQafZ+w7e/3oa3pQ+cN9fzow2GSEu6ug5lDhw+pkxrHNff40oSdzSxr2QAZ8xE4Gu5a5QAA"
+ },
+ {
+  "id": "samurai",
+  "style": "Cinematic",
+  "w": 665,
+  "h": 886,
+  "prompt": "samurai standing in falling cherry blossoms, dramatic backlight, ultra detailed",
+  "seed": 1013,
+  "src": "/showcase/samurai.webp",
+  "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoMABAAA4BaJZACdACzbCHfyuGgAM4/WaJ6E+l+KF7bGkT8qiZdUckz2iPIkCaok5VGq603XuvtuiV/tTkHOfAmBnYM1NZ/q6fvU98KF4Ax08t5zCJDlkOIAAA="
+ },
+ {
+  "id": "skater",
+  "style": "Fashion",
+  "w": 665,
+  "h": 886,
+  "prompt": "skateboarder in oversized pink pants mid-air against a pastel wall, fashion editorial",
+  "seed": 1016,
+  "src": "/showcase/skater.webp",
+  "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoMABAAA4BaJYgCdADG9U6YgAD+tdFgQSjvGkKxKhlsnLoMkdn5RlxmoC8Y5EavAMxxFN2qmyzhPMUInHUJwAAA"
+ },
+ {
+  "id": "fox",
+  "style": "3D",
+  "w": 768,
+  "h": 768,
+  "prompt": "tiny clay fox in a miniature autumn forest, claymation style, soft light",
+  "seed": 1019,
+  "src": "/showcase/fox.webp",
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoMAAwAA4BaJbACdAEf/gOYMzQA/vF0UIp/ZAUOdRj0oyGkSW73XuOBwHq1XQxuo5ZJrSCV99JA8523xewAAA=="
+ },
+ {
+  "id": "watch",
+  "style": "Product",
+  "w": 768,
+  "h": 768,
+  "prompt": "luxury chronograph watch on dark marble, macro product photography, dramatic reflections",
+  "seed": 1022,
+  "src": "/showcase/watch.webp",
+  "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMAAwAA4BaJZwAAvh7ISELIAD9d6wkxULxvAG4hWFX6SCvESujJa8Df+ALGKC/EIKmlDkji1jebMDDgAA="
+ }
+]

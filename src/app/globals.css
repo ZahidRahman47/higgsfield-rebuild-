@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0c0e;
+  --color-panel: #141518;
+  --color-card: #1b1c20;
+  --color-card-hover: #232429;
+  --color-line: #2a2b31;
+  --color-muted: #8b8d95;
+  --color-dim: #5d5f66;
+  --color-lime: #d9ff43;
+  --color-lime-deep: #b8e01c;
+  --color-pink: #ff2e74;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-display);
+}
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--color-bg);
+  color: #f2f2f3;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+}
+
+/* shimmer for generating cards */
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(217, 255, 67, 0.08), transparent);
+  animation: shimmer 1.6s infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* motion presets for the video preview */
+@keyframes dolly-in { from { transform: scale(1); } to { transform: scale(1.28); } }
+@keyframes dolly-out { from { transform: scale(1.28); } to { transform: scale(1); } }
+@keyframes pan-left { from { transform: scale(1.2) translateX(6%); } to { transform: scale(1.2) translateX(-6%); } }
+@keyframes pan-right { from { transform: scale(1.2) translateX(-6%); } to { transform: scale(1.2) translateX(6%); } }
+@keyframes rise { from { transform: scale(1.2) translateY(6%); } to { transform: scale(1.2) translateY(-6%); } }
+@keyframes orbit { 0% { transform: scale(1.25) rotate(-2deg) translateX(-4%); } 100% { transform: scale(1.25) rotate(2deg) translateX(4%); } }
+@keyframes handheld {
+  0%, 100% { transform: scale(1.12) translate(0, 0) rotate(0); }
+  25% { transform: scale(1.12) translate(-1%, 0.6%) rotate(-0.4deg); }
+  50% { transform: scale(1.12) translate(0.8%, -0.8%) rotate(0.3deg); }
+  75% { transform: scale(1.12) translate(-0.6%, 0.9%) rotate(-0.2deg); }
+}
+@keyframes crash-zoom { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1.6); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-play { animation: none !important; }
+}
