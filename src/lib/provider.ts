@@ -11,16 +11,18 @@ type Out = { body: ArrayBuffer; type: string };
 
 export async function generateImage(prompt: string, w: number, h: number, seed: number, enhance: boolean): Promise<Out> {
   const { CF_ACCOUNT_ID, CF_API_TOKEN } = process.env;
-  if (CF_ACCOUNT_ID && CF_API_TOKEN) return cloudflare(prompt, w, h, seed, enhance, CF_ACCOUNT_ID, CF_API_TOKEN);
+  if (CF_ACCOUNT_ID && CF_API_TOKEN) return cloudflare(prompt, w, h, enhance, CF_ACCOUNT_ID, CF_API_TOKEN);
   return pollinations(prompt, w, h, seed, enhance);
 }
 
-async function cloudflare(prompt: string, w: number, h: number, seed: number, enhance: boolean, account: string, token: string): Promise<Out> {
+async function cloudflare(prompt: string, w: number, h: number, enhance: boolean, account: string, token: string): Promise<Out> {
   const full = enhance ? `${prompt}, highly detailed, sharp focus, professional lighting, rich color` : prompt;
   const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/@cf/black-forest-labs/flux-1-schnell`, {
     method: "POST",
     headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt: full.slice(0, 2048), steps: 6, seed }),
+    // flux-1-schnell rejects a seed; variety comes from the model, and the result is
+    // pinned anyway because /api/image is cached per (prompt, size, seed) URL
+    body: JSON.stringify({ prompt: full.slice(0, 2048), steps: 6 }),
     signal: AbortSignal.timeout(45_000),
   });
   const json = (await res.json().catch(() => null)) as { result?: { image?: string }; errors?: { message: string }[] } | null;
