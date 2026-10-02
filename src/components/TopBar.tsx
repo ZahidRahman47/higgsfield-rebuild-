@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Bell, Folder, Image as ImageIcon, Sparkles, Video, X } from "lucide-react";
+import { Folder, Image as ImageIcon, Sparkles, Video, X } from "lucide-react";
 import clsx from "clsx";
 import Logo from "./Logo";
+import { AccountMenu, NotificationsMenu } from "./AccountMenus";
 import { useStudio } from "@/lib/store";
 import { DAILY_CREDITS, MODEL_LABEL, STYLES } from "@/lib/generate";
 import { MOTIONS } from "@/lib/motion";
@@ -77,10 +78,8 @@ export default function TopBar() {
             <span className="tabular-nums" suppressHydrationWarning>{credits}</span>
             <span className="hidden text-muted sm:inline">credits</span>
           </Link>
-          <button aria-label="Notifications" className="hidden rounded-full p-2 text-muted hover:text-white sm:block">
-            <Bell className="size-4.5" />
-          </button>
-          <div className="hidden size-8 rounded-full sm:block bg-[radial-gradient(circle_at_40%_40%,#f6ffcf,#d9ff43_45%,#7a8f20)]" aria-label="Guest" />
+          <NotificationsMenu />
+          <AccountMenu />
         </div>
       </nav>
       {open && (

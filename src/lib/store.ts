@@ -36,6 +36,7 @@ type State = {
   setStatus: (id: string, status: GenStatus) => void;
   remove: (ids: string[]) => void;
   dismissBanner: () => void;
+  resetAll: () => void;
 };
 
 const today = () => new Date().toISOString().slice(0, 10);
@@ -63,6 +64,7 @@ export const useStudio = create<State>()(
         set((s) => ({ generations: s.generations.map((g) => (g.id === id ? { ...g, status } : g)) })),
       remove: (ids) => set((s) => ({ generations: s.generations.filter((g) => !ids.includes(g.id)) })),
       dismissBanner: () => set({ bannerDismissed: true }),
+      resetAll: () => set({ credits: DAILY_CREDITS, refilledOn: today(), generations: [], bannerDismissed: false }),
     }),
     // hydrate after mount (see Providers) so server and first client render match
     { name: "hf-rebuild", skipHydration: true, version: 1 },
