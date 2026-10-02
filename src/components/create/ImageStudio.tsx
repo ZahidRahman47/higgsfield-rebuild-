@@ -23,7 +23,7 @@ export default function ImageStudio() {
   const [style, setStyle] = useState(styleById(params.get("style") ?? "cinematic").id as string);
   const [aspect, setAspect] = useState<AspectId>("3:4");
   const [quality, setQuality] = useState<QualityId>("high");
-  const [count, setCount] = useState(4);
+  const [count, setCount] = useState(1);
   const [enhance, setEnhance] = useState(true);
   const [zoom, setZoom] = useState(3);
   const [open, setOpen] = useState<Generation | null>(null);
