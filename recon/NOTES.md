@@ -23,15 +23,22 @@ The core loop, with everything else stripped away:
 | 12 | Profile `/@handle` | All works / Projects / Blogs / Generations tabs, views and likes, followers. All empty. "Create project" / "Create blog" |
 | 13 | Image mega-menu | 13 features (Create Image, Cinematic Cameras, Canvas, Soul ID, AI Influencer, Relight, Inpaint, Upscale, Face Swap…) + 13 models |
 | 14 | Video mega-menu | 14+ features (Create Video, Cinema Studio, 3D Jutsu, Shorts, Explainer, Click to Ad…) + 15+ models (Seedance, Kling, Veo, Wan, Grok, MiniMax…) |
+| 15 | Create Image `/ai/image?model=gpt_image_2` | A centred hero ("Start creating with Higgsfield Soul Cinema", although the selected model is GPT Image 2). A bottom prompt bar holds: + (reference), @ (elements), model picker, aspect "Auto", quality "High", resolution "2K", a 1/4 batch counter, and **Generate showing its cost (6.5 credits, with 8.5 crossed out)**. There's also an "Academy" tip banner |
+| 16 | Generate on the free plan → "Unlock GPT Image 2.0" paywall | Basic $9 / Pro $20 / Max $50, with the same countdown |
+| 17 | Create Video `/ai/video?model=seedance_2_5` | A left panel: Create / Edit / Motion Control tabs, a preset card ("General, Seedance 2.5", Change), References / Extend Video, a prompt with @Elements and an audio toggle, model, duration 5s, aspect 16:9, 1080p, bitrate, **Generate 60 credits (80 crossed out)**. On the right, a "How it works" panel: Add image → Choose preset → Get video, plus History |
+| 18 | Generate on the free plan → paywall again | |
 
-**Gap: I don't have screenshots of an actual generation yet.** That covers the Create Image / Create Video page, the prompt box and settings, the waiting state, the result, and the Assets library. That's the core of the product, so I need it captured before we design the main screen.
+**The most important finding: a free user cannot generate anything with the default models.** Clicking Generate on both image (15→16) and video (17→18) opens a paywall. The whole sign-up, quiz and onboarding flow ends with a user who has never seen the product work. (The results view and Assets library were never reached, because generation was blocked.)
+
+What Higgsfield does well, and what we should keep: **the cost is shown on the Generate button**, the prompt bar has every setting in one row, and the video side has a clear "image → preset → video" explanation.
 
 ## What is wrong with it (where we can be better)
 
 1. **Too much choice, not enough guidance.** The top nav has 15+ items and gets cut off ("Supercom…"). The two mega-menus list about 55 entries. "Features" and "models" are separate lists, and the same tool (Canvas, Relight) shows up in both menus. A new user has to know the difference between Seedance 2.5, Kling 3.0 and Veo 3.1 before they can make anything.
 2. **The quiz asks the right questions, then ignores the answers.** Its last step lists the real pain points: *prompting is hard, inconsistent results, high cost of top models, limited generations, I'm new to this*. Right after it comes a paywall, not a first generation. Nothing in these screenshots shows the answers being used afterwards.
 3. **Upsell before value.** A countdown banner sits at the top of every page, a "personal 50% OFF" modal appears straight after onboarding, and a pricing wall follows, all before the user has generated a single thing.
-4. **Credits are opaque.** "600 credits" only means something through footnotes like "≈ 27 Seedance videos". There's no price per generation shown at the moment you decide to generate.
+4. **Credits are hard to judge.** The cost *is* on the Generate button (good), but "6.5" or "60" means nothing without a balance next to it, and a free user's balance can't buy either one. The plans only make sense through footnotes like "≈ 27 Seedance videos".
+6. **Free users are locked out.** See above. Value is never shown before the user is asked to pay.
 5. **Empty states are a dead end.** The profile shows three empty sections (Projects, Blogs, Generations) and asks a brand-new user to "Create blog" instead of pointing them to their first generation.
 
 ## The product thesis for the rebuild
