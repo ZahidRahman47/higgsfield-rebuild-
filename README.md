@@ -53,7 +53,7 @@ npm run dev
 
 ## Honest limitations
 
-- Without Cloudflare keys, the free fallback API is rate-limited per server IP, so generation can be slow or fail. Failures are refunded and can be retried.
+- The live site generates with Cloudflare FLUX.1 schnell, typically in 4–14 seconds per image. Without Cloudflare keys, it falls back to a free keyless API that is rate-limited per server IP and can be slow or fail. Failures are refunded and can be retried.
 - "Video" on the free tier is a keyframe plus a camera move, not a video model.
 - History and credits live in your browser (no accounts yet).
 - Landing-page photos are free-licence images from [Unsplash](https://unsplash.com), credited on hover.

@@ -34,7 +34,7 @@ export type QualityId = (typeof QUALITIES)[number]["id"];
 
 export const VIDEO_COST = 10;
 export const DAILY_CREDITS = 100;
-export const MODEL_LABEL = "Sana · Pollinations";
+export const MODEL_LABEL = "FLUX.1 · Workers AI";
 
 export function styleById(id: string) {
   return STYLES.find((s) => s.id === id) ?? STYLES[0];

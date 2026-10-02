@@ -5,7 +5,7 @@ const COLS: [string, [string, string][]][] = [
   ["Styles", [["Cinematic", "/image?style=cinematic"], ["Photoreal", "/image?style=photoreal"], ["Product", "/image?style=product"], ["Fashion", "/image?style=fashion"], ["Anime", "/image?style=anime"], ["3D Render", "/image?style=3d"]]],
   ["Camera Moves", [["Dolly In", "/video?motion=dolly-in"], ["Pan Left", "/video?motion=pan-left"], ["Crane Up", "/video?motion=rise"], ["Arc Shot", "/video?motion=orbit"], ["Handheld", "/video?motion=handheld"], ["Crash Zoom", "/video?motion=crash-zoom"]]],
   ["Explore", [["Community", "/#community"], ["Visual Effects", "/#vfx"], ["Projects", "/#projects"], ["Assets", "/assets"]]],
-  ["Project", [["Source code", "https://github.com/ZahidRahman47/higgsfield-rebuild-"], ["Photos: Unsplash", "https://unsplash.com"], ["Model: Pollinations", "https://pollinations.ai"]]],
+  ["Project", [["Source code", "https://github.com/ZahidRahman47/higgsfield-rebuild-"], ["Photos: Unsplash", "https://unsplash.com"], ["Model: FLUX on Workers AI", "https://developers.cloudflare.com/workers-ai/"]]],
 ];
 
 export default function Footer() {
